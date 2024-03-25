@@ -1,5 +1,3 @@
-
-
 # Butterfly and Moth Classification Model
 
 ## Dataset
@@ -27,13 +25,12 @@
 - The model output is a probability rating of each image belonging to each label (species).
 
 ## Model Description
-- The Convolutional Neural Network (CNN) will be made up of [NUMBER] layers:
-- Layer one: [NUMBER] convolution layers.
-- Layer two: [NUMBER] pooling layers.
+- The Convolutional Neural Network (CNN) will be made up of 14 layers:
+- Five pairs of convolutional and pooling layers.
 - A single flatten layer.
-- A dense layer with a dropout layer that will drop [PERCENTAGE] of the nodes, to prevent overfitting.
+- A dense layer followed by a dropout layer that will drop 30% of the nodes, to prevent overfitting.
 - The output layer, which uses the softmax activation function, will output a probability for each image to belong to each class.
-- Finally a compling layer, using the loss function categorical crossentropy, as is common with multiclass classification, the adam optimizer, and the accuracy metric.
+- The model is then complied, using the loss function categorical crossentropy, as is common with multiclass classification, the adam optimizer, and the accuracy metric.
 
 ## Model Development
 - The model went through several iterations before it met the performance criteria.
@@ -71,11 +68,15 @@
 - After fitting it proported a loss of 0.9708, and a val_loss of 0.8476. The validation loss being lower than the training loss suggest the model is generalising well to new data.
 - After fitting, the model proported an accuracy level of 0.7140 and a val_loss of 0.7648. The validation accuracy being at 76% on a 100 class classification problem is acceptable. For reference, random allocation would result in a sucess rate of 1%.
 
-
 ## Dashboard Design
 
 ## Dashboard UX
 
 ## Credits
+- Data Set is from Kaggle.
+- The function to split the data was taken from the first walkthrough project.
+- The function to load images as an array was taken from the first walkthrough project.
+- The augmented image data variable was taken from the first walkthrough project.
 
 ## Acknowledgements 
+ - Mo Shami, my mentor for the project was of great help when providing guidence and advice.
