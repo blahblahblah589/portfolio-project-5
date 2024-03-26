@@ -8,8 +8,8 @@
 
 ## Business Requirements
 1. Determine the population distribution, based on current data.
-2. Provide average image for each species classification as a quick reference for researchers in the field. 
-3. Create an ML model that can classify 100 different species of butterflys and moths with 75% accuracy; A high benchmark for such a complex model.
+2. Provide average image, image veriability, and image montage for each species classification as a quick reference for researchers in the field.
+3. Create an ML model that can classify 100 different species of butterflys and moths with 75% accuracy; a high benchmark for such a complex model.
 
 ## Hypotheses and Validation of Hypotheses
 - Present a visual average of each classification, and determine whether this can assist in educating researchers in collecting the data.
