@@ -1,5 +1,9 @@
 # Butterfly and Moth Classification Model
 
+![image](/readme_images/am-i-responsive.png)
+
+Please view the deployed project [here]()
+
 ## Dataset
 - The dataset was taken from [Kaggle](https://www.kaggle.com/datasets/gpiosenka/butterfly-images40-species).
 - It provided 13,094 images of butterflies and moths, distributed among 100 different species.
@@ -116,10 +120,28 @@
 - Matplotlib
 - Scikit Learn
 
-## Deployment
-
-
 ## CRISP-DM
+- CRISP-DM stands for Cross-Industry Standard Process for Data Mining. It is a widely adopted methodology for data mining projects.
+- Business Understanding:
+ - The project objectives were to create a more robust and streamlined methodology for classifying butterfly and moth species.
+ - This was to be achived with a CNN ML model that would automate the process of classification; and with visualisation tools of the given data.
+- Data Understanding/Data Preparation:
+ - The data was collected form a kaggle dataset.
+ - The data was prepared for use in an ML model first by reformatting the directories to suit the required standard. 
+ - Secondly, the data was redistributed to reflect a 70:20:10 ratio for train, test and validation sets, respectivley.
+ - Thirdly, the data was visualised in terms of distribution between target variables.
+- Modeling:
+ - Given that this is a multiclass classification problem, the type of model chosen was a deep neural network.
+ - The model was to be made up of a series of convolutional and pooling layer pairs, witha. flattern layer, a dense layer and a dense output layer. The intricacies of this are detailed in the model development section of this README.md document.
+- Evaluation:
+ - The model was evaluated in the context of the business requirement of a 75% accuracy rating. Thsi was deemed acceptable by industry standards for a classification model that features far less targets than 100, which this model does.
+ - This standard was reached in the 5th version of the model, as detailed in the model development section of this README.md document.
+ - Another metric by which the model was evaluated is it's accuracy compared to it's validation accuracy:
+![image](/outputs/v1/model_accuracy.png)
+ - The final metric by whcih the model's performance was evaluated was its loss compared to validation accuracy:
+![image](/outputs/v1/model_loss.png)
+ - As can be seen fromt he above graphs, the model was able to generalise it's training to predict on unseen data.
+- Deployment:
 
 ## Credits
 - Data Set is from Kaggle.
