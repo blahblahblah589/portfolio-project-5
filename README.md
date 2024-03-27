@@ -7,22 +7,22 @@ Please view the deployed project [here]()
 ## Dataset
 - The dataset was taken from [Kaggle](https://www.kaggle.com/datasets/gpiosenka/butterfly-images40-species).
 - It provided 13,094 images of butterflies and moths, distributed among 100 different species.
-- The dataset came with a train, test, validation set up but the ratios of the three folders was unnaceptable for the training of a CNN. I therefore retistributed the data to 70:20:10, respectively. 
+- The dataset came with a train, test, validation set up but the ratios of the three folders was unacceptable for the training of a CNN. I therefore redistributed the data to 70:20:10, respectively. 
 - The folder names were also restructured to reflect the standard set up.
 
 ## Business Requirements
 1. Determine the population distribution, based on current data.
-2. Provide average image, image veriability, and image montage for each species classification as a quick reference for researchers in the field.
-3. Create an ML model that can classify 100 different species of butterflys and moths with 75% accuracy; a high benchmark for such a complex model.
+2. Provide average image, image variability, and image montage for each species classification as a quick reference for researchers in the field.
+3. Create an ML model that can classify 100 different species of butterflies and moths with 75% accuracy; a high benchmark for such a complex model.
 
 ## Hypotheses and Validation of Hypotheses
-- Present a visual average of each classification, and determine whether this can assist in educating researchers in collecting the data.
+- Present a visual average of each classification and determine whether this can assist in educating researchers in collecting the data.
     - Given the variations in the image composition for each datapoint, the average image did not provide the required detail to researchers to use when trying to classify an image manually.
 - Create an image montage of random selections of each classification, for reference.
-    - Going forward, researchers will be able to use the dashboard to produce an image montage fo a selected species.
+    - Going forward, researchers will be able to use the dashboard to produce an image montage for a selected species.
 
 ## ML Business Case
-- The butterfly and moth classification model is to be used in classifying images of butterflies or moths provided by researchers and members of the public. The aim is to, over time, develop a strong understanding of species distribution and population over a specified area; the concern that brought this model to life was biodiversity but has obvious use cases for ecology and etemology requirements.
+- The butterfly and moth classification model is to be used in classifying images of butterflies or moths provided by researchers and members of the public. The aim is to, over time, develop a strong understanding of species distribution and population over a specified area; the concern that brought this model to life was biodiversity but has obvious use cases for ecology and etymology requirements.
 - The aim is to provide the model that can perform such tasks with an accuracy rate of 75%.
 - The model output is a probability rating of each image belonging to each label (species).
 
@@ -67,8 +67,8 @@ Please view the deployed project [here]()
     - 45 epochs.
         - Accuracy: 76%
 - The 5th version of the model has been selected for use.
-- After fitting it proported a loss of 0.9708, and a val_loss of 0.8476. The validation loss being lower than the training loss suggest the model is generalising well to new data.
-- After fitting, the model proported an accuracy level of 0.7140 and a val_loss of 0.7648. The validation accuracy being at 76% on a 100 class classification problem is acceptable. For reference, random allocation would result in a sucess rate of 1%.
+- After fitting it purported a loss of 0.9708, and a val_loss of 0.8476. The validation loss being lower than the training loss suggest the model is generalising well to new data.
+- After fitting, the model purported an accuracy level of 0.7140 and a val_loss of 0.7648. The validation accuracy being at 76% on a 100 class classification problem is acceptable. For reference, random allocation would result in a success rate of 1%.
 
 ## Dashboard Design
 - The dashboard design follows the basic set up of the walkthrough project.
@@ -96,7 +96,7 @@ Please view the deployed project [here]()
 #### ML Prediction Metrics Page:
 - Shows a plot of label frequencies for train, test and validation sets.
 ![image](/readme_images/dataset_breakdown_dashboard.png)
-- Lays out the history of the development of the model, including the perameters and hyperperameters of each.
+- Lays out the history of the development of the model, including the parameters and hyperperameters of each.
 ![image](/readme_images/model_history_dashboard.png)
 - Displays a plot of the model evaluation results.
 ![image](/readme_images/model_eval_dashboard.png)
@@ -124,23 +124,23 @@ Please view the deployed project [here]()
 - CRISP-DM stands for Cross-Industry Standard Process for Data Mining. It is a widely adopted methodology for data mining projects.
 - Business Understanding:
  - The project objectives were to create a more robust and streamlined methodology for classifying butterfly and moth species.
- - This was to be achived with a CNN ML model that would automate the process of classification; and with visualisation tools of the given data.
+ - This was to be achieved with a CNN ML model that would automate the process of classification; and with visualisation tools of the given data.
 - Data Understanding/Data Preparation:
  - The data was collected form a kaggle dataset.
  - The data was prepared for use in an ML model first by reformatting the directories to suit the required standard. 
- - Secondly, the data was redistributed to reflect a 70:20:10 ratio for train, test and validation sets, respectivley.
+ - Secondly, the data was redistributed to reflect a 70:20:10 ratio for train, test and validation sets, respectively.
  - Thirdly, the data was visualised in terms of distribution between target variables.
-- Modeling:
+- Modelling:
  - Given that this is a multiclass classification problem, the type of model chosen was a deep neural network.
- - The model was to be made up of a series of convolutional and pooling layer pairs, witha. flattern layer, a dense layer and a dense output layer. The intricacies of this are detailed in the model development section of this README.md document.
+ - The model was to be made up of a series of convolutional and pooling layer pairs, with a flatten layer, a dense layer and a dense output layer. The intricacies of this are detailed in the model development section of this README.md document.
 - Evaluation:
- - The model was evaluated in the context of the business requirement of a 75% accuracy rating. Thsi was deemed acceptable by industry standards for a classification model that features far less targets than 100, which this model does.
+ - The model was evaluated in the context of the business requirement of a 75% accuracy rating. This was deemed acceptable by industry standards for a classification model that features far less targets than 100, which this model does.
  - This standard was reached in the 5th version of the model, as detailed in the model development section of this README.md document.
  - Another metric by which the model was evaluated is it's accuracy compared to it's validation accuracy:
 ![image](/outputs/v1/model_accuracy.png)
- - The final metric by whcih the model's performance was evaluated was its loss compared to validation accuracy:
+ - The final metric by which the model's performance was evaluated was its loss compared to validation accuracy:
 ![image](/outputs/v1/model_loss.png)
- - As can be seen fromt he above graphs, the model was able to generalise it's training to predict on unseen data.
+ - As can be seen from the above graphs, the model was able to generalise it's training to predict on unseen data.
 - Deployment:
 
 ## Credits
@@ -150,4 +150,4 @@ Please view the deployed project [here]()
 - The augmented image data variable was taken from the first walkthrough project.
 
 ## Acknowledgements 
- - Mo Shami, my mentor for the project was of great help when providing guidence and advice.
+ - Mo Shami, my mentor for the project was of great help when providing guidance and advice.

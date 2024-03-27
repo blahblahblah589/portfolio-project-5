@@ -51,7 +51,7 @@ def create_image_montage(data, label_to_display, nrows, ncols, figsize):
             img_index = random.sample(montage, nrows * ncols)
         else:
             print('Error - not enough images for montage.')
-            print('Please decreace "ncols" or "nrows".')
+            print('Please decrease "ncols" or "nrows".')
 
     montage_rows = range(0, nrows)
     montage_cols = range(0, ncols)

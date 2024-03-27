@@ -52,12 +52,12 @@ def ml_prediction_metrics_body():
     st.markdown('45 epochs')
     st.markdown('Accuracy: 76%')
     st.markdown(
-        f'After fitting it proported a loss of 0.9708, and a val_loss of 0.8476. \n'
+        f'After fitting it purported a loss of 0.9708, and a val_loss of 0.8476. \n'
         f'The validation loss being lower than the training loss suggest the model is \n'
-        f'generalising well to new data.\n After fitting, the model proported an \n'
+        f'generalising well to new data.\n After fitting, the model purported an \n'
         f'accuracy level of 0.7140 and a val_loss of 0.7648. The validation accuracy being '
         f'at 76% on a 100 class classification problem is acceptable. For reference, '
-        f'random allocation would result in a sucess rate of 1%.'
+        f'random allocation would result in a success rate of 1%.'
     )
 
     st.write('## Model Evaluation')
