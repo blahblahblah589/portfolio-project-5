@@ -2,7 +2,7 @@ import streamlit as st
 
 def project_summary_body():
 
-    st.write('# Project Summary')
+    st.write('## Project Summary')
 
     st.info(
         f'**General Information**\n\n'

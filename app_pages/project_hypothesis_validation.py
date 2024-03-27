@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 
 def project_hypothesis_body():
-    st.write("### Project Hypothesis and Validation")
+    st.write("## Project Hypothesis and Validation")
 
     st.success(
         f"Despite varying species of butterfly and moth sharing both \n"

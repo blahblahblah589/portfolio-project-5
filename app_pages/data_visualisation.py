@@ -10,7 +10,7 @@ import itertools
 import random
 
 def data_visualisation_body():
-    st.write('# Dataset Visualiser')
+    st.write('## Dataset Visualiser')
     st.info(
         f'* The client is wants an average image per class to determine\n '
         f'if the results could help researchers recognise species.')

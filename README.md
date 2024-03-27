@@ -2,7 +2,7 @@
 
 ![image](/readme_images/am-i-responsive.png)
 
-Please view the deployed project [here]()
+Please view the deployed project [here](https://butterfly-moth-classification-dcf0375fe409.herokuapp.com/)
 
 ## Dataset
 - The dataset was taken from [Kaggle](https://www.kaggle.com/datasets/gpiosenka/butterfly-images40-species).
@@ -142,6 +142,11 @@ Please view the deployed project [here]()
 ![image](/outputs/v1/model_loss.png)
  - As can be seen from the above graphs, the model was able to generalise it's training to predict on unseen data.
 - Deployment:
+ - The deployment of this web app was done using Heroku.
+ 1. Create a new app on heroku.
+ 2. For the app to deploy to heroku, the heroku stack had to be changed. Do this by running *heroku login -i* and entering your credentials, if you have two factor authentication, then your password is your SPI key. Run *heroku stack:set heroku-20 -a your_app_name*.
+ 3. Deploy the project on the heroku app dashboard. Review the build log for any errors.
+ - If required, you can make a copy of the repository by forking it. To do this, all you will need to do is open the repository and click the 'Fork' button on the right hand side opposite the repo name.
 
 ## Credits
 - Data Set is from Kaggle.

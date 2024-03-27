@@ -11,7 +11,7 @@ from src.machine_learning.predictive_analysis import (
                                                     )
 
 def species_classification_body():
-    st.write('# Species Classification Tool')
+    st.write('## Species Classification Tool')
     st.info(
         f'* The client want to be able to determine a species from an image.'
         )
