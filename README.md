@@ -1,36 +1,28 @@
 # Butterfly and Moth Classification Model
----
 
 ## Dataset
----
 - The dataset was taken from [Kaggle](https://www.kaggle.com/datasets/gpiosenka/butterfly-images40-species).
 - It provided 13,094 images of butterflies and moths, distributed among 100 different species.
 - The dataset came with a train, test, validation set up but the ratios of the three folders was unnaceptable for the training of a CNN. I therefore retistributed the data to 70:20:10, respectively. 
 - The folder names were also restructured to reflect the standard set up.
 
 ## Business Requirements
----
 1. Determine the population distribution, based on current data.
 2. Provide average image, image veriability, and image montage for each species classification as a quick reference for researchers in the field.
 3. Create an ML model that can classify 100 different species of butterflys and moths with 75% accuracy; a high benchmark for such a complex model.
 
 ## Hypotheses and Validation of Hypotheses
----
 - Present a visual average of each classification, and determine whether this can assist in educating researchers in collecting the data.
     - Given the variations in the image composition for each datapoint, the average image did not provide the required detail to researchers to use when trying to classify an image manually.
-- Present a visual varience of each classification, and determine if this can assist in educating researchers in diferenitating between species.
-    - 
 - Create an image montage of random selections of each classification, for reference.
     - Going forward, researchers will be able to use the dashboard to produce an image montage fo a selected species.
 
 ## ML Business Case
----
 - The butterfly and moth classification model is to be used in classifying images of butterflies or moths provided by researchers and members of the public. The aim is to, over time, develop a strong understanding of species distribution and population over a specified area; the concern that brought this model to life was biodiversity but has obvious use cases for ecology and etemology requirements.
 - The aim is to provide the model that can perform such tasks with an accuracy rate of 75%.
 - The model output is a probability rating of each image belonging to each label (species).
 
 ## Model Description
----
 - The Convolutional Neural Network (CNN) will be made up of 14 layers:
 - Five pairs of convolutional and pooling layers.
 - A single flatten layer.
@@ -39,7 +31,6 @@
 - The model is then complied, using the loss function categorical crossentropy, as is common with multiclass classification, the adam optimizer, and the accuracy metric.
 
 ## Model Development
----
 - The model went through several iterations before it met the performance criteria.
 - The 1st version contained:
     - Conv2D layers (32, 64, 64, 128).
@@ -76,21 +67,65 @@
 - After fitting, the model proported an accuracy level of 0.7140 and a val_loss of 0.7648. The validation accuracy being at 76% on a 100 class classification problem is acceptable. For reference, random allocation would result in a sucess rate of 1%.
 
 ## Dashboard Design
----
+- The dashboard design follows the basic set up of the walkthrough project.
+#### Sidebar:
+- The sidebar is made up of 5 radio buttons to navigate through the dashboard with.
+![image](/readme_images/sidebar_dahboard.png)
+#### Project Summary Page:
+- Displays information about the use case for the ML model.
+- Provides information about the dataset.
+- Offers a link to the readme.md.
+- Sates the business requirements.
+![image](/readme_images/project_summary_dashboard.png)
+#### Data Visualisation Page:
+- Provides the option for a population distribution chart.
+- Offers the user the ability to see the average image for each label.
+- Creates an image montage for a selected species.
+![image](/readme_images/dataset_visualiser_dashboard.png)
+#### Species Classification Page:
+- Allows users to input an image for classification.
+- Also offers a potential dataset to draw from.
+![image](/readme_images/ml_species_classification_tool.png)
+#### Project Hypothesis and Validation Page:
+- States the project hypothesises and how they were validated.
+![image](/readme_images/hypothesis_dashboard.png)
+#### ML Prediction Metrics Page:
+- Shows a plot of label frequencies for train, test and validation sets.
+![image](/readme_images/dataset_breakdown_dashboard.png)
+- Lays out the history of the development of the model, including the perameters and hyperperameters of each.
+![image](/readme_images/model_history_dashboard.png)
+- Displays a plot of the model evaluation results.
+![image](/readme_images/model_eval_dashboard.png)
 
-## Dashboard UX
----
+## Technologies Used
+#### Languages:
+- Python
+- Markdown
+#### Platforms:
+- Kaggle
+- Jupyter Notebooks
+- Heroku
+#### Libraries:
+- Tensor Flow
+- Keras
+- Pandas
+- NumPy
+- Plotly
+- Seaborn
+- Streamlit
+- Matplotlib
+- Scikit Learn
 
-## Code Validation
----
+## Deployment
+
+
+## CRISP-DM
 
 ## Credits
----
 - Data Set is from Kaggle.
 - The function to split the data was taken from the first walkthrough project.
 - The function to load images as an array was taken from the first walkthrough project.
 - The augmented image data variable was taken from the first walkthrough project.
 
 ## Acknowledgements 
----
  - Mo Shami, my mentor for the project was of great help when providing guidence and advice.
