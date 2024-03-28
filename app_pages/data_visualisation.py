@@ -16,7 +16,7 @@ def data_visualisation_body():
         f'if the results could help researchers recognise species.')
     
     version = 'v1'
-    labels = os.listdir('inputs/butterfly_moth/images/validation')
+    labels = os.listdir('inputs/butterfly_moth/images/test')
     if st.checkbox('Average Image'):
         label_to_display = st.selectbox(label="Select species", options=labels, index=0)
         if st.button("Create Average Image"):
@@ -31,7 +31,7 @@ def data_visualisation_body():
     if st.checkbox("Image Montage"): 
       st.write("* To refresh the montage, click on the 'Create Montage' button")
       my_data_dir = 'inputs/butterfly_moth/images'
-      labels = os.listdir('inputs/butterfly_moth/images/validation')
+      labels = os.listdir('inputs/butterfly_moth/images/test')
       label_to_display = st.selectbox(label="Select label", options=labels, index=0)
       if st.button("Create Montage"):      
         create_image_montage(data=labels,
@@ -40,7 +40,7 @@ def data_visualisation_body():
       st.write("---")
 
     if st.checkbox("Population Distribution"):
-        population_distribution(data='inputs/butterfly_moth/images/validation')
+        population_distribution(data='inputs/butterfly_moth/images/test')
         st.write("---")
 
 
@@ -51,9 +51,9 @@ def average_image_display(label_to_display):
 
 def create_image_montage(data, label_to_display, nrows, ncols, figsize):
     
-    labels = os.listdir('inputs/butterfly_moth/images/validation')
+    labels = os.listdir('inputs/butterfly_moth/images/test')
     if label_to_display in labels:
-        montage = os.listdir('inputs/butterfly_moth/images/validation' + '/' + label_to_display)
+        montage = os.listdir('inputs/butterfly_moth/images/test' + '/' + label_to_display)
         if nrows * ncols < len(montage):
             img_index = random.sample(montage, nrows * ncols)
         else:
@@ -66,7 +66,7 @@ def create_image_montage(data, label_to_display, nrows, ncols, figsize):
 
     fig, axes = plt.subplots(nrows=nrows, ncols=ncols, figsize=figsize)
     for x_images in range(0, nrows * ncols):
-        img = imread('inputs/butterfly_moth/images/validation' + '/' + label_to_display + '/' + img_index[x_images])
+        img = imread('inputs/butterfly_moth/images/test' + '/' + label_to_display + '/' + img_index[x_images])
         img_shape = img.shape
         fig.suptitle((f'{label_to_display.replace("_"," ").title()}'))
         axes[montage_plot[x_images][0], montage_plot[x_images][1]].imshow(img)
@@ -76,8 +76,8 @@ def create_image_montage(data, label_to_display, nrows, ncols, figsize):
 def population_distribution(data):
 
     image_data = []
-    data = ('inputs/butterfly_moth/images/validation')
-    labels = os.listdir('inputs/butterfly_moth/images/validation')
+    data = ('inputs/butterfly_moth/images/test')
+    labels = os.listdir('inputs/butterfly_moth/images/test')
     for label in labels:
         species = os.path.join(data, label)
         count = len([name for name in os.listdir(species) if os.path.isfile(os.path.join(species, name))])

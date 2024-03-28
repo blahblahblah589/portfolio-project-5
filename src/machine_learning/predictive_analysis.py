@@ -32,7 +32,7 @@ def load_model_and_predict(my_image, version):
     Load and perform ML prediction over live images
     """
 
-    labels = os.listdir('inputs/butterfly_moth/images/validation')
+    labels = os.listdir('inputs/butterfly_moth/images/test')
     model = load_model(f"outputs/v1/butterfly_moth_classification_final.h5")
 
     predict_probabilities = model.predict(my_image)

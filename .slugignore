@@ -1,3 +1,4 @@
 jupyter_notebooks/*
 readme_images/
 inputs/butterfly_moth/images/train
+inputs/butterfly_moth/images/validation
