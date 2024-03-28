@@ -70,6 +70,17 @@ Please view the deployed project [here.](https://butterfly-moth-classification-d
 - After fitting it purported a loss of 0.9708, and a val_loss of 0.8476. The validation loss being lower than the training loss suggest the model is generalising well to new data.
 - After fitting, the model purported an accuracy level of 0.7140 and a val_loss of 0.7648. The validation accuracy being at 76% on a 100 class classification problem is acceptable. For reference, random allocation would result in a success rate of 1%.
 
+## Bugs
+- Late in the process of this project I decided to refit my model one last time in the hopes of improving it once more. While refitting the model in jupyter notebook 'ModellingAndEvaluation.ipynb' I was unable to produce the model history. The error was the model history had a type of none, despite the model remaining as was when loaded.
+![image](/readme_images/model_type.png)
+![image](/readme_images/model_history_error_1.png)
+- As a result I couldnt not produce the plots that showed the model loss and accuracy compared to the validation set.
+![image](/readme_images/model_history_error_2.png)
+- I was able to continue using the previous model (performance difference was nominal), to predict on unseen data in the same notebook.
+- I have tried to resolve this error in a number of ways to prevent the error appearing on the final notebook but I cannot resolve. 
+- My code reflects the way in which I was taught in the 'TensorFlow Unit 10: Image Classification' notebook; my code reflects the way in which the walkthrough project presented the task. There is no direct tutor support for the PP5 Predictive Analytics module. Instead there is a slack channel, which try as I might, I cannot get a response from. 
+- I have, of course, tried to resolve this issue with my own research into the problem but I cannot find a reason why my model, newly saved or loaded from an old version, would not have a history component.
+
 ## Dashboard Design
 - The dashboard design follows the basic set up of the walkthrough project.
 #### Sidebar:
