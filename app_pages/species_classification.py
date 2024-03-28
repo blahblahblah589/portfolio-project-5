@@ -7,7 +7,6 @@ from src.data_management import download_dataframe_as_csv
 from src.machine_learning.predictive_analysis import (
                                                     load_model_and_predict,
                                                     resize_input_image
-                                                    # plot_predictions_probabilities
                                                     )
 
 def species_classification_body():
@@ -37,8 +36,7 @@ def species_classification_body():
 
             version = 'v1'
             resized_img = resize_input_image(img=img_pil, version=version)
-            pred_proba, pred_class = load_model_and_predict(resized_img, version=version)
-            # plot_predictions_probabilities(pred_proba, pred_class)
+            pred_proba, pred_class = load_model_and_predict(my_image=resized_img, version=version)
 
             df_report = df_report.append({"Name":image.name, 'Result': pred_class },
                                         ignore_index=True)

@@ -9,35 +9,6 @@ from tensorflow.keras.preprocessing import image
 from PIL import Image
 from src.data_management import load_pkl_file
 
-# def plot_predictions_probabilities(pred_proba, pred_class):
-#     """
-#     Plot prediction probability results
-#     """
-
-#     class_indices = load_pkl_file(file_path=f"outputs/v1/class_indices.pkl")
-
-
-#     prob_per_class = pd.DataFrame(
-#         data=np.zeros(len(class_indices)),
-#         index=class_indices,
-#         columns=['Probability']
-#     )
-
-#     for idx, cls in enumerate(pred_class):
-#         prob_per_class.loc[cls, 'Probability'] = pred_proba.idx 
-
-#     prob_per_class = prob_per_class.round(3)
-
-#     prob_per_class['Species'] = prob_per_class.index
-
-#     fig = px.bar(
-#         prob_per_class,
-#         x='Species',
-#         y=prob_per_class['Probability'],
-#         range_y=[0, 1],
-#         width=600, height=300, template='seaborn')
-#     st.plotly_chart(fig)
-
 
 def resize_input_image(img, version):
     """
