@@ -1,8 +1,8 @@
 # Butterfly and Moth Classification Model
 
-![image](/readme_images/am-i-responsive.png)
+![image](/readme_images/am_i_responsive.png)
 
-Please view the deployed project [here](https://butterfly-moth-classification-dcf0375fe409.herokuapp.com/)
+Please view the deployed project [here.](https://butterfly-moth-classification-dcf0375fe409.herokuapp.com/)
 
 ## Dataset
 - The dataset was taken from [Kaggle](https://www.kaggle.com/datasets/gpiosenka/butterfly-images40-species).
