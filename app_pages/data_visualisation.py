@@ -18,8 +18,10 @@ def data_visualisation_body():
     version = 'v1'
     labels = os.listdir('inputs/butterfly_moth/images/validation')
     if st.checkbox('Average Image'):
-        for label in labels:
-            avg_image = plt.imread(f'outputs/{version}/avg_var_{label}.png')
+        label_to_display = st.selectbox(label="Select species", options=labels, index=0)
+        if st.button("Create Average Image"):
+            average_image_display(label_to_display=label_to_display)
+
     
     st.warning(
         f'We notice the average and variability images did not show '
@@ -34,13 +36,18 @@ def data_visualisation_body():
       if st.button("Create Montage"):      
         create_image_montage(data=labels,
                       label_to_display=label_to_display,
-                      nrows=3, ncols=3, figsize=(10,25))
+                      nrows=3, ncols=3, figsize=(25,10))
       st.write("---")
 
     if st.checkbox("Population Distribution"):
         population_distribution(data='inputs/butterfly_moth/images/validation')
         st.write("---")
 
+
+def average_image_display(label_to_display):
+
+    avg_image = plt.imread(f'outputs/v1/avg_var_{label_to_display}.png')
+    st.image(avg_image, caption=f'Average Image and Average Variance for {label_to_display}')
 
 def create_image_montage(data, label_to_display, nrows, ncols, figsize):
     
@@ -64,7 +71,7 @@ def create_image_montage(data, label_to_display, nrows, ncols, figsize):
         fig.suptitle((f'{label_to_display.replace("_"," ").title()}'))
         axes[montage_plot[x_images][0], montage_plot[x_images][1]].imshow(img)
     plt.tight_layout()
-    plt.show()
+    st.pyplot(fig=fig)
 
 def population_distribution(data):
 
@@ -86,11 +93,11 @@ def population_distribution(data):
     population = species_df['Recorded Population']
     species = species_df['Species']
 
-    plt.figure(figsize=(25,10))
+    plt.figure(figsize=(40,12))
     plt.bar(species, population, color='green')
-    plt.ylim(ymin=60)
+    plt.ylim(ymin=5)
     plt.xlabel('Species')
     plt.ylabel('Population')
     plt.title('Population Distribution')
     plt.xticks(rotation=90)
-    plt.show()
+    st.pyplot(plt)
