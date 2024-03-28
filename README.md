@@ -81,6 +81,14 @@ Please view the deployed project [here.](https://butterfly-moth-classification-d
 - My code reflects the way in which I was taught in the 'TensorFlow Unit 10: Image Classification' notebook; my code reflects the way in which the walkthrough project presented the task. There is no direct tutor support for the PP5 Predictive Analytics module. Instead there is a slack channel, which try as I might, I cannot get a response from. 
 - I have, of course, tried to resolve this issue with my own research into the problem but I cannot find a reason why my model, newly saved or loaded from an old version, would not have a history component.
 
+## Issues
+- Heroku only allows a maximum memory upload of 500MB, my full project is upwards of 700MB.
+- To resolve this issue I was forced to pass the train dataset to the .slugignore to prevent upload.
+- This had reduced the ability of the live heroku project to accuratley predict on unseen data.
+- This issue can be resolved by upgrading heroku Dynos, unfortunaley the first three levels (Eco, Basic, Standard) all have the same limit. The Standard x2 Dyno would suffice formy needs, however, the maximum possible cost of running this dyno is $1,500 a month. I am sure that the cost for such a small project would not reach these levels, however I cannot be sure what the costs would be and I have no guarentees of how long I would have to pay for the upgrade.
+- Due to these reasons I have been forced to upload the reduced capability version to the heroku app.
+- Running the project locally with *streamlit run app.py* and attempting a classification task will show the true potential of the model.
+
 ## Dashboard Design
 - The dashboard design follows the basic set up of the walkthrough project.
 #### Sidebar:
